@@ -1,0 +1,57 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API Test Suite",
+		"_postman_id": "e3752cd4-84a7-ed4b-5432-83183fafb8ea",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "5 + 10 = 15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Body is correct\"] = responseBody === \"15\";\n\ntests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "http://188.166.197.0:5010/api/add?param1=5&param2=10",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "5 - 10 = -5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Body is correct\"] = responseBody === \"-5\";\n\ntests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "http://188.166.197.0:5020/api/subtract?param1=5&param2=10",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
