@@ -52,6 +52,29 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Negative To Positive Boundary Case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Body is correct\"] = responseBody === \"0\";\n\ntests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "http://188.166.197.0:5010/api/add?param1=-1&param2=2",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
