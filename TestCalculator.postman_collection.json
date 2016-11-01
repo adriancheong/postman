@@ -60,7 +60,7 @@
 					"listen": "test",
 					"script": {
 						"type": "text/javascript",
-						"exec": "tests[\"Body is correct\"] = responseBody === \"0\";\n\ntests[\"Status code is 200\"] = responseCode.code === 200;"
+						"exec": "tests[\"Body is correct\"] = responseBody === \"1\";\n\ntests[\"Status code is 200\"] = responseCode.code === 200;"
 					}
 				}
 			],
